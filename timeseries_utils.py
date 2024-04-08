@@ -18,7 +18,9 @@ def anomaly(df):
 
 def example_usage():
     # Example usage:
-    temperature_data = pd.read_csv('temperature_data.csv', parse_dates=True, index_col=0)
+    temperature_data = pd.read_csv(
+        "temperature_data.csv", parse_dates=True, index_col=0
+    )
     temp_clim = monthly_climatology(temperature_data)
     temp_anom = anomaly(temperature_data)
     temp_clim.plot()
@@ -26,5 +28,5 @@ def example_usage():
     plt.show()
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     example_usage()

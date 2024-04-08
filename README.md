@@ -1,6 +1,7 @@
 # climanomaly
 
 [![license](https://img.shields.io/badge/license-Apache%202.0-black)](https://github.com/thomas-himmer/climanomaly/blob/main/LICENSE)
+![Tests](https://github.com/thomas-himmer/climanomaly/workflows/Run%20tests/badge.svg)
 
 This repository contains Python code for performing time series analysis, including computing monthly climatology and anomalies.
 

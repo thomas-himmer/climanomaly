@@ -1,19 +1,25 @@
 import pandas as pd
 import matplotlib.pyplot as plt
+import numpy as np
 
 
 def monthly_climatology(df):
     """Compute the monthly climatology (seasonal cycle) of a given time series."""
-    return df.groupby(df.index.month).mean()
+    return df.groupby(df.index.dayofyear).mean()
+
+
+
+
+
 
 
 def anomaly(df):
     """Compute the anomaly of a given time series by removing the climatology."""
 
     def standardize(x):
-        return (x - x.mean()) / x.std()
+        return x - x.mean()
 
-    return df.groupby(df.index.month).transform(standardize)
+    return df.groupby(df.index.month).mean()
 
 
 def example_usage():

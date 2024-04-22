@@ -12,6 +12,7 @@ def monthly_climatology(df):
 
 
 
+
 def anomaly(df):
     """Compute the anomaly of a given time series by removing the climatology."""
 
